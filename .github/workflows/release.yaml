@@ -18,8 +18,8 @@ jobs:
           go-version: "1.21"
       - name: Test
         run: go build -v && go test ./...
-      - name: Build for windows/amd64
-        run: go build -o terraformer-aws-windows-amd64
+      - name: Build for win/amd64
+        run: GOOS=windows GOARCH=amd64 go build -o terraformer-aws-windows-amd64
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
