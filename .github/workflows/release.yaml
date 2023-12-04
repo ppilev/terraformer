@@ -19,7 +19,7 @@ jobs:
       - name: Test
         run: go build -v && go test ./...
       - name: Build for windows/amd64
-        run: go build -o terraformer-aws-windows-amd64.exe
+        run: go build -o terraformer-aws-windows-amd64
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
